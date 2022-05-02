@@ -7,7 +7,7 @@ router.post('/register',async(req,res)=>{
   const{name,email,password,pic}=req.body;
   if(!name||!email||!password){
       res.status(400);
-      throw new Error("please Enter all the Fields")
+      throw new Error("please Enter all the Field")
   }
   const userExists = await User.findOne({email});
   if(userExists){
